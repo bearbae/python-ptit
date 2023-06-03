@@ -1,0 +1,10 @@
+n=int(input())
+a=list(map(int,input().split()))
+a.sort()
+check=True
+for i in range(1,n):
+    if a[i]-a[i-1]>1:
+        check=False
+        print(a[i-1]+1)
+        break
+if check==True:print(a[n-1]+1)

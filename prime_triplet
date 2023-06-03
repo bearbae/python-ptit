@@ -1,0 +1,17 @@
+import math
+def check(n):
+    if (n<2): return False
+    for i in range(2,math.isqrt(n)+1):
+        if n%i==0:return False
+    return True
+t=int(input())
+while t!=0:
+    n=int(input())
+    d=0
+    for i in range(0,n):
+        if check(i):
+            if check(i+2) or check (i+4):
+                if check(i+6) and i+6<n:
+                    d+=1
+    print(d)
+    t-=1

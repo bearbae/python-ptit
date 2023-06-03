@@ -1,0 +1,31 @@
+import math
+b=[]
+def check(n):
+    if n<2: return False
+    for i in range(2,math.isqrt(n)+1):
+        if n%i==0:return False
+    return True
+def tong(n,k):
+    s=0
+    for i in range(n,k+1):
+        s+=b[i]
+    return s
+n=int(input())
+a=list(map(int,input().split()))
+d=[0]*10001
+for i in range(len(a)):
+    d[a[i]]+=1
+for i in range(len(a)):
+    if d[a[i]]!=0:
+        b.append(a[i])
+        d[a[i]]=0
+m=len(b)
+ktra=False
+for i in range(len(b)):
+    s1=tong(0,i)
+    s2=tong(i+1,m-1)
+    if check(s1) and check(s2):
+        ktra=True
+        print(i)
+        break
+if ktra==False:print("NOT FOUND")

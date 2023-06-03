@@ -1,0 +1,21 @@
+n,m=map(int,input().split())
+b=[]
+ma=0
+mi=999999
+for i in range(n):
+    a=list(map(int,input().split()))
+    ma=max(max(a),ma)
+    mi=min(min(a),mi)
+    b.append(a)
+res=ma-mi
+check=False
+for i in range(n):
+    for j in range(m):
+        if b[i][j]==res:check=True
+if check==True:
+    print(res)
+    for i in range(n):
+        for j in range(m):
+            if b[i][j]==res:
+                print("Vi tri [",i,"][",j,"]",sep="",end="\n")
+else:print("NOT FOUND")

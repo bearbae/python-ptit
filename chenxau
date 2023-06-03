@@ -1,0 +1,8 @@
+s1=input()
+s2=input()
+p=int(input())
+for i in range(1,p):
+    print(s1[i-1],end="")
+print(s2,end="")
+for i in range(p,len(s1)+1):
+    print (s1[i-1],end="")

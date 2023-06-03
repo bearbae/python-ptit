@@ -1,0 +1,9 @@
+n,m=map(int,input().split())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+x=set(a)
+y=set(b)
+z=set(a)&set(b)
+if len(x)==len(y)and len(x)==len(z):
+    print("YES")
+else:print("NO")

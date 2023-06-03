@@ -1,0 +1,16 @@
+t=int(input())
+while t!=0:
+    t-=1
+    n,k=map(int,input().split())
+    l=pow(2,n)/2
+    while True:
+        if n==1:
+            print('A')
+            break
+        if l==k:
+            print(chr(n+64))
+            break
+        if k>l:
+            k=l-(k-l)
+        n-=1
+        l/=2

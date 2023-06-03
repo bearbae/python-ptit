@@ -1,0 +1,22 @@
+import math
+def check(n):
+    if n<2: return False
+    for i in range(2,math.isqrt(n)+1):
+        if n%i==0:return False
+    return True
+n,m=map(int,input().split())
+b=[]
+res=0
+for i in range(n):
+    a=list(map(int,input().split()))
+    for c in a:
+        if check(c) and c>res:
+            res=c
+    b.append(a)
+if res==0:print("NOT FOUND")
+else:
+    print(res)
+    for i in range(n):
+        for j in range(m):
+            if b[i][j]==res:
+                print("Vi tri [",i,"][",j,"]",sep="",end="\n")

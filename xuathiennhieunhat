@@ -1,0 +1,17 @@
+t=int(input())
+while t!=0:
+    n=int(input())
+    a=list(map(int,input().split()))
+    d=[0]*1000001
+    for i in range(len(a)):
+        d[a[i]]+=1
+    m=0
+    k=-1
+    a.sort(reverse=True)
+    for i in range(len(a)):
+        if d[a[i]]>=m and d[a[i]]>n/2:
+            k=a[i]
+            m=d[a[i]]
+    if (k==-1):print("NO")
+    else:print(k)
+    t-=1

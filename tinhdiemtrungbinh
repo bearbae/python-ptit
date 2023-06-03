@@ -1,0 +1,12 @@
+t=int(input())
+a=list(map(float,input().split()))  
+mi=min(a)
+ma=max(a)
+s=0
+d=0
+for i in range(len(a)):
+    if a[i]==mi or a[i]==ma:
+        d+=1
+        continue
+    else:s+=a[i]
+print(round(s/(len(a)-d),2))

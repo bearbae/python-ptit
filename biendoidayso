@@ -1,0 +1,28 @@
+while True:
+    check=False
+    a=list(map(int,input().split()))
+    for i in range (len(a)):
+        if a[i]!=0:
+            check=True
+            break
+    if check==False :break
+    d=0
+    while True:
+        check2=True
+        for i in range(len(a)-1):
+            if (a[i]!=a[i+1]):check2=False
+        if check2:
+            print(d)
+            break
+        k=a[0]
+        for i in range(len(a)-1):
+            a[i]=abs(a[i]-a[i+1])
+        a[len(a)-1]=abs(a[len(a)-1]-k)
+        d+=1
+        check1=True
+        for i in range(len(a)-1):
+            if (a[i]!=a[i+1]):check1=False
+        if check1==True:
+            print(d)
+            break
+

@@ -1,0 +1,31 @@
+
+
+import math
+def check(n):
+    if (n<2): return False
+    for i in range(2,math.isqrt(n)+1):
+        if n%i==0:return False
+    return True
+def tn(n):
+    x=0
+    m=n
+    while n>0:
+        x=x*10+n%10
+        n//=10
+    if x==m or check(x)==False:return False
+    return True
+def tn1(n):
+    x=0
+    m=n
+    while n>0:
+        x=x*10+n%10
+        n//=10
+    return x
+t=int(input())
+while t!=0:
+    n=int(input())
+    for i in range(2,n):
+        if check(i) and tn(i) and tn1(i)<n and tn1(i)>i:
+            print (i,tn1(i),sep=" ",end=" ")
+    print()
+    t-=1

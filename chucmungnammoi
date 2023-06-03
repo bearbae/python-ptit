@@ -1,0 +1,8 @@
+t=int(input())
+a=[]
+while t!=0:
+    s=input()
+    a.append(s)
+    t-=1
+b=set(a)
+print(len(b))

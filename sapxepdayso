@@ -1,0 +1,14 @@
+t=int(input())
+for i in range(t):
+    n,k=map(int,input().split())
+    a=list(map(int,input().split()))
+    am=[]
+    res=0
+    for i in range(n):
+        if a[res]<a[i]:res=i
+        if a[i]<0:am.append(a[i])
+    for i in am: print(i,end=" ")
+    a.insert(res,k)
+    for i in a:
+        if i>=0:print(i,end=" ")
+    print()

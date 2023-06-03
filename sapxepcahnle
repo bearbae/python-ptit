@@ -1,0 +1,24 @@
+n=int(input())
+a=[]
+d=0
+while True:
+    k=input()
+    m=k.split()
+    a+=[int(i) for i in m]
+    if len (a)==n:break
+c=[]
+l=[]
+for i in range(len(a)):
+    if a[i]%2==0:c.append(a[i])
+    else:l.append(a[i])
+c.sort()
+l.sort(reverse=True)
+k=0
+h=0
+for i in range(len(a)):
+    if a[i]%2==0:
+        print(c[k],end=" ")
+        k+=1
+    else:
+        print(l[h],end=" ")
+        h+=1

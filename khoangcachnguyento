@@ -1,0 +1,14 @@
+import math
+def check(n):
+    if n<2: return False
+    for i in range(2,math.isqrt(n)+1):
+        if n%i==0:return False
+    return True
+n,x=map(int,input().split())
+a=[]
+for i in range(100000):
+    if (check(i)):a.append(i)
+print(x,end=" ")
+for i in range(n):
+    print(x+a[i],end=" ")
+    x+=a[i]

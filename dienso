@@ -1,0 +1,12 @@
+t=int(input())
+while t!=0:
+    t-=1
+    n=int(input())
+    a=list(map(int,input().split()))
+    l=min(a)
+    r=max(a)
+    d=0
+    for i in range(l,r+1):
+        if a.count(i)==0:d+=1
+    print(d)
+

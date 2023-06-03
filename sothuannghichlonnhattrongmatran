@@ -1,0 +1,27 @@
+import math
+from re import X
+def check(n):
+    if n<10:return False
+    m=n
+    x=0
+    while(n>0):
+        x=x*10+(n%10)
+        n//=10
+    if x==m:return True
+    return False
+n,m=map(int,input().split())
+b=[]
+res=0
+for i in range(n):
+    a=list(map(int,input().split()))
+    for c in a:
+        if check(c) and c>res:
+            res=c
+    b.append(a)
+if res==0:print("NOT FOUND")
+else:
+    print(res)
+    for i in range(n):
+        for j in range(m):
+            if b[i][j]==res:
+                print("Vi tri [",i,"][",j,"]",sep="",end="\n")

@@ -1,0 +1,12 @@
+t=int(input())
+while t!=0:
+    n=int(input())
+    a=list(map(int,input().split()))
+    d=[0]*1000001
+    for i in range (len(a)):
+        d[a[i]]+=1
+    for i in range(len(a)):
+        if d[a[i]]%2==1:
+            print(a[i])
+            break
+    t-=1

@@ -1,0 +1,20 @@
+from lib2to3.pgen2.token import STRING
+import string
+
+
+class RECTANGLE:
+    def __init__(self,cd,cr,ms):
+        self.cd=cd
+        self.cr=cr
+        self.ms=ms
+    def perimeter(self):
+        return (self.cd+self.cr)*2
+    def area(self):
+        return (self.cd*self.cr)
+    def color (self):
+        return self.ms.lower().capitalize()
+arr = input().split()
+r = RECTANGLE(int(arr[0]), int(arr[1]), (arr[2]))
+if int(arr[0])<=0 or int(arr[1])<=0:
+    print("INVALID")
+else:print('{} {} {}'.format(r.perimeter(), r.area(), r.color()))

@@ -1,0 +1,21 @@
+s1=input()
+s2=input()
+s1=s1.lower()
+s2=s2.lower()
+m=s1.split()
+n=s2.split()
+x=set(m)|set(n)
+y=set(m)&set(n)
+a=[]
+b=[]
+for i in x:
+    a.append(i)
+for j in y:
+    b.append(j)
+a.sort()
+b.sort()
+for i in a:
+    print (i,end=" ")
+print()
+for j in b:
+    print (j,end=" ")

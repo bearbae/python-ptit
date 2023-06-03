@@ -1,0 +1,15 @@
+n=int(input())
+b=[]
+for i in range(n):
+    a=list(map(int,input().split()))
+    b.append(a)
+k=int(input())
+st=0
+sd=0
+for i in range(n):
+    for j in range(n):
+        if i<j:st+=b[i][j]
+        elif i>j:sd+=b[i][j]
+if abs(st-sd)<=k:print("YES")
+else:print("NO")
+print (abs(st-sd))

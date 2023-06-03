@@ -1,0 +1,14 @@
+s=input()
+a=[]
+i=0
+d=[0]*100
+while i+2<=len(s):
+    a.append(int(s[i]+s[i+1]))
+    i+=2
+for i in range(len(a)):
+    d[a[i]]+=1
+for i in range(len(a)):
+    if d[a[i]]!=0:
+        print(a[i],d[a[i]],sep=" ",end="\n")
+        d[a[i]]=0
+

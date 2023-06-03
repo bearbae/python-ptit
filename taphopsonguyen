@@ -1,0 +1,27 @@
+n,m=map(int,input().split())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+d=[]
+e=[]
+f=[]
+x=set(a)&set(b)
+for i in x:
+    d.append(i)
+y=set(a)-set(b)
+for i in y:
+    e.append(i)
+z=set(b)-set(a)
+for i in z:
+    f.append(i)
+d.sort()
+e.sort()
+f.sort()
+for i in d:
+    print(i,end=" ")
+print()
+for i in e:
+    print(i,end=" ")
+print()
+for i in f:
+    print(i,end=" ")
+print()

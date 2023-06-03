@@ -1,0 +1,9 @@
+t=int(input())
+for j in range(1,t+1):
+    s1=input()
+    s2=input()
+    check=True
+    for i in range(len(s2)):
+        if (s2.count(s2[i])!=s1.count(s2[i])):check=False
+    if check == True:print("Test ",j,": YES",sep="",end="\n")
+    else:print("Test ",j,": NO",sep="",end="\n")
